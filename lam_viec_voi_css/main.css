@@ -1,0 +1,115 @@
+/* CSS Variable */
+:root {
+    --textcolor: red;
+} /*Biến toàn cục global*/
+
+h1 {
+    --my-color: green;/*Biến cục bộ local*/
+    color: var(--my-color)
+}
+
+h2 {
+    color: var(--textcolor)
+}
+
+a {
+    color: var(--textcolor)
+}
+
+/*----------------------------------------------------------------------------------*/
+
+/* CSS units */
+
+/* 1. Absolute units - không làm thay đổi kích thước khi co dãn màn hình*/
+/* px */
+
+#heading-id {
+    font-size: 40;
+}
+
+/* 2. relative units - thay đổi kích thước phụ thuộc các thẻ khác*/
+/* % - phụ thuộc vào kích thước thẻ trước nó*/
+
+#image {
+    width: 20%;
+}
+
+/* rem - phụ thuộc thẻ html */
+
+#body-id {
+    font-size: 2rem;
+}
+
+/* em - phụ thuộc vào font-size của thẻ mẹ nào gần nhất */
+
+#body {
+    font-size: 4em;
+}
+
+/* vw - viewportweight vh - viewportheight - phụ thuộc vào trình duyệt*/
+
+#image {
+    width: 20vw;
+}
+
+/*----------------------------------------------------------------------------------*/
+
+/* Pseudo classes - lớp giả*/
+/* root */
+:root {
+    --document-color: blue;
+}
+
+.box {
+    background-color: var(--document-color);
+}
+
+/* hover - di chuyển chuột đổi màu*/
+#heading-id:hover {
+    color: blue;
+}
+
+/* active - nhấn và giữ đổi màu*/
+a:active {
+    color: violet;
+}
+
+/* first-child - chọn element đầu last-child - chọn element sau*/
+/* có nhiều element giống nhau thì chọn element đầu hoặc element cuối để làm việc với nó */
+
+/*----------------------------------------------------------------------------------*/
+
+/* Pseudo elements - phần tử giả*/
+/* ::before , ::after */
+.box::before {
+    content: "";
+    display: block;
+    width: 30%;
+    height: 40%;
+    background-color: yellow;
+}
+.box::after {
+    content: "";
+    display: block;
+    width: 30%;
+    height: 40%;
+    background-color: yellow;
+}
+
+/* ::first-letter */
+h1::first-letter {
+    color:yellow;
+    font-size: 60px;
+}
+
+/* first-line */
+.heading-class::first-line {
+    color: red;
+}
+
+/* selection */
+
+h1::selection {
+    background-color: yellow;
+    color: wheat;
+}

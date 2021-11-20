@@ -1,0 +1,48 @@
+html, body {
+    margin: 0;
+}
+/* .header {
+    width: 100%;
+    height: 100px;
+} */
+/* background-clip - đổ màu từ phần được chọn (chỉ dùng cho abckground-color)*/
+/* .header {
+    background-color: red;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 10px violet dashed;
+    background-clip: padding-box;
+} */
+
+/* background-image - tạo hình ảnh cho background */
+.image {
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://thuthuatnhanh.com/wp-content/uploads/2018/07/gai-xinh-thai-lan-Nene.jpg);
+    background-size: 30%; /*Dùng để thay đổi kích thước ảnh*/
+    background-repeat: no-repeat;
+}
+
+/* Background-size - căn chỉnh background */
+.image {
+    background-size: contain; /*chấp nhận có khoảng trắng để căn chỉnh background lớn nhất có thể*/
+    background-size: cover; /*không chấp nhận có khoảng trắng*/
+}
+
+/* Background-origin - Đổ ảnh từ phần được chọn (tương tự như background-clip nhưng dùng cho image) */
+.image {
+    background-size: 30%;
+    border: 20px dashed red;
+    padding: 20px;
+    box-sizing: border-box;
+    background-origin: padding-box;
+}
+/* background-position - dịch chuyển vị trí của ảnh */
+.image {
+    background-position: top left; /* tính theo trục Ox, Oy*/
+}
+
+/* background shorthand - viết đơn giản background */
+.image {
+    background: url(https://thuthuatnhanh.com/wp-content/uploads/2018/07/gai-xinh-thai-lan-Nene.jpg) no-repeat center / 30% ;
+}

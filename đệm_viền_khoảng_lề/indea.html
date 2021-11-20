@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Điệm, Viền và Khoảng lề</title>
+        <meta charset="utf-8">
+        <style>
+            .box {
+                width: 100px;
+                height: 100px;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                float: left;
+            }
+            .box1 {
+                background-color: black;
+            }
+            .box2 {
+                background-color: orange;
+            }
+            .box3 {
+                background-color: red;
+
+    /* padding */
+                padding: 20px; /* for all */
+                padding: 20px 30px; /* top + bottom -- left + right */
+                padding: 20px 40px 30px; /* top -- left + right -- bottom*/
+                padding: 20px 40px 60px 50px; /* top -- right -- bottom -- left*/
+    /* border */
+                border: 1px rgb(0, 0, 255) solid;
+    /* margin */
+                margin: 20px;
+                /* còn lại giống padding */
+    /* box-sizing */
+                box-sizing: border-box;
+                /* tự đọng tính toán content theo kích thước đã đề ra */
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="box box1">Box1</div>
+        <div class="box box2">Box2</div>
+        <div class="box box3">Box3</div>
+    </body>
+</html>

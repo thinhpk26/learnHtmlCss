@@ -1,0 +1,266 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#anounces {
+    position: fixed;
+    right: 16px;
+    top: 32px;
+}
+
+#anounces {
+    display: inline-block;
+    z-index: 999999;
+    transition: all linear 2s;
+}
+
+@keyframes slideInleft{
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 20px));
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+#anounces > div {
+    display: flex;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.success {
+    border-left: 4px rgb(74, 221, 29) solid;
+    padding: 12px 12px;
+    margin-top: 16px;
+    background-color: #fff;
+    transition: all linear 2s;
+}
+
+#anounces > div > div:nth-child(1),
+#anounces > div > div:nth-child(3) {
+    line-height: 49px;
+}
+
+.success__begin {
+    font-size: 24px;
+    padding-right: 16px;
+    color: rgb(74, 221, 29);
+}
+
+.success__body {
+    flex-grow: 1;
+}
+
+.success__body h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.success__body p {
+    margin: 8px 0 0 0;
+    color: grey;
+}
+
+.success__close {
+    font-size: 24px;
+    padding-left: 64px;
+    padding-right: 8px;
+    color: gray;
+    display: flex;
+}
+
+.success__close > div {
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.success__close > div i {
+    align-self: center;
+}
+
+.success__close > div:hover {
+    cursor: pointer;
+    background-color: #ccc;
+}
+
+/* ifo */
+
+.info {
+    border-left: 4px rgb(50, 129, 247) solid;
+    padding: 12px 12px;
+    background-color: #fff;
+    transition: all linear 2s;
+}
+
+.info__begin {
+    font-size: 24px;
+    padding-right: 16px;
+    color: rgb(50, 129, 247);
+}
+
+.info__body {
+    flex-grow: 1;
+}
+
+.info__body h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.info__body p {
+    margin: 8px 0 0 0;
+    color: grey;
+}
+
+.info__close {
+    font-size: 24px;
+    padding-left: 64px;
+    padding-right: 8px;
+    color: gray;
+    display: flex;
+}
+
+.info__close > div {
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.info__close > div i {
+    align-self: center;
+}
+
+.info__close > div:hover {
+    cursor: pointer;
+    background-color: #ccc;
+}
+
+/* warning */
+
+.warning {
+    border-left: 4px rgba(202, 168, 15, 0.904) solid;
+    padding: 12px 12px;
+    background-color: #fff;
+    transition: all linear 2s;
+}
+
+.warning__begin {
+    font-size: 24px;
+    padding-right: 16px;
+    color: rgba(202, 168, 15, 0.904);
+}
+
+.warning__body {
+    flex-grow: 1;
+}
+
+.warning__body h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.warning__body p {
+    margin: 8px 0 0 0;
+    color: grey;
+}
+
+.warning__close {
+    font-size: 24px;
+    padding-left: 64px;
+    padding-right: 8px;
+    color: gray;
+    cursor: pointer;
+    display: flex;
+}
+
+.warning__close > div {
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.warning__close > div i {
+    align-self: center;
+}
+
+.warning__close > div:hover {
+    cursor: pointer;
+    background-color: #ccc;
+}
+
+.info, .warning {
+    margin-top: 20px;
+}
+
+/* button */
+
+#button {
+    height: 150vh;
+    display: flex;
+    font-family: "Helvetical Neue";
+    flex-direction: column;
+}
+
+#button > div {
+    margin: auto;
+}
+
+.btn {
+    text-transform: uppercase;
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    padding: 12px 48px;
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+}
+
+.btn + .btn {
+    margin-left: 16px;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+.btn--success {
+    background-color: #71be34;
+}
+
+.btn--warn {
+    background-color: rgb(50, 129, 247);
+}
+
+.btn--danger {
+    background-color: rgba(202, 168, 15, 0.904);
+}
+
+.btn-disable {
+    background-color: rgb(204, 204, 204);
+    pointer-events: none;
+}
